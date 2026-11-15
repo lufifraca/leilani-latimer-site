@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
-import { about, featured, marquee, services, stats, testimonial } from "@/lib/content"
+import { about, featured, marquee, services, stats, testimonial, videos } from "@/lib/content"
 import { BoardCards } from "@/components/site/board-cards"
 import { CountUp } from "@/components/site/count-up"
 import { Cta } from "@/components/site/cta"
@@ -10,6 +10,7 @@ import { Hero } from "@/components/site/hero"
 import { Marquee } from "@/components/site/marquee"
 import { Reveal } from "@/components/site/reveal"
 import { ThoughtLeadership } from "@/components/site/thought-leadership"
+import { VideoPlayer } from "@/components/site/video-player"
 import { ValuesExplorer } from "@/components/site/values-explorer"
 import { asset } from "@/lib/asset"
 
@@ -188,6 +189,27 @@ export default function Home() {
           </Reveal>
 
           <ThoughtLeadership />
+        </div>
+      </section>
+
+      {/* Videos */}
+      <section className="section">
+        <div className="container-x flex flex-col gap-12 py-20 lg:py-28">
+          <Reveal className="flex flex-col gap-4">
+            <p className="eyebrow text-muted-foreground">Talks and interviews</p>
+            <h2 className="display text-5xl sm:text-7xl">
+              On <em>camera</em>
+            </h2>
+          </Reveal>
+          <ul className="grid gap-x-8 gap-y-12 md:grid-cols-2">
+            {videos.map((video, i) => (
+              <li key={video.title}>
+                <Reveal delay={(i % 2) * 0.08}>
+                  <VideoPlayer video={video} />
+                </Reveal>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

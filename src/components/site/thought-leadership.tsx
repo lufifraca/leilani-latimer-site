@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { ArrowUpRightIcon, HeadphonesIcon, PlayIcon } from "lucide-react"
+import { ArrowUpRightIcon, HeadphonesIcon } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
 import { categories, pieces, type Piece } from "@/lib/content"
 import { Badge } from "@/components/ui/badge"
@@ -13,7 +13,7 @@ const ALL = "All"
 const INITIAL = 6
 
 function PieceCard({ piece }: { piece: Piece }) {
-  const KindIcon = piece.kind === "Video" ? PlayIcon : piece.kind === "Podcast" ? HeadphonesIcon : null
+  const KindIcon = piece.kind === "Podcast" ? HeadphonesIcon : null
   return (
     <a
       href={piece.href}

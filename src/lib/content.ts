@@ -206,13 +206,12 @@ export const boardProfile = {
   ] as [string, string][],
 }
 
-export type Category = "Boards & Governance" | "Leadership & Inclusion" | "Growth & Transformation" | "Watch & Listen"
+export type Category = "Boards & Governance" | "Leadership & Inclusion" | "Growth & Transformation"
 
 export const categories: Category[] = [
   "Boards & Governance",
   "Leadership & Inclusion",
   "Growth & Transformation",
-  "Watch & Listen",
 ]
 
 export type Piece = {
@@ -222,7 +221,7 @@ export type Piece = {
   href: string
   image: string
   category: Category
-  kind?: "Article" | "Podcast" | "Video"
+  kind?: "Article" | "Podcast"
 }
 
 const img = (name: string) => asset(`/images/${name}`)
@@ -331,7 +330,7 @@ export const pieces: Piece[] = [
     source: "Podcast",
     href: "https://wdcpodcast.buzzsprout.com/1825579/10129676-leilani-latimer-on-taking-the-road-less-traveled",
     image: img("road-less-traveled.webp"),
-    category: "Watch & Listen",
+    category: "Leadership & Inclusion",
     kind: "Podcast",
   },
   {
@@ -374,38 +373,42 @@ export const pieces: Piece[] = [
     image: img("value-expectations.webp"),
     category: "Growth & Transformation",
   },
+]
+
+export type Video = {
+  title: string
+  note?: string
+  /** YouTube video id, played inline. */
+  youtube?: string
+  /** Self-hosted clip, played inline. */
+  file?: string
+  poster: string
+  /** Optional link to a longer version. */
+  more?: { href: string; label: string }
+}
+
+export const videos: Video[] = [
   {
     title: "How Data Improves Customer Engagement Strategies",
-    source: "YouTube",
-    href: "https://www.youtube.com/watch?v=Ou60wC83sfQ",
-    image: img("yt-Ou60wC83sfQ.jpg"),
-    category: "Watch & Listen",
-    kind: "Video",
+    file: asset("/videos/zephyr-health.mp4"),
+    poster: img("zephyr-poster.jpg"),
+    more: { href: "https://www.youtube.com/watch?v=Ou60wC83sfQ", label: "Watch on YouTube" },
   },
   {
     title: "How Sustainability Increases Customer Loyalty, Trust, and Brand Differentiation",
-    source: "YouTube",
-    href: "https://www.youtube.com/watch?v=hln0FUQmDtY",
-    image: img("yt-hln0FUQmDtY.jpg"),
-    category: "Watch & Listen",
-    kind: "Video",
+    youtube: "hln0FUQmDtY",
+    poster: img("yt-hln0FUQmDtY.jpg"),
   },
   {
     title: "Green Travel Best Practices",
-    subtitle: "Vintage 2012",
-    source: "YouTube",
-    href: "https://www.youtube.com/watch?v=lSQ__H6XIDQ",
-    image: img("yt-lSQ__H6XIDQ.jpg"),
-    category: "Watch & Listen",
-    kind: "Video",
+    note: "Vintage 2012",
+    youtube: "lSQ__H6XIDQ",
+    poster: img("yt-lSQ__H6XIDQ.jpg"),
   },
   {
     title: "The importance of Big Data and AI for commercial success",
-    subtitle: "2016 - In Italian",
-    source: "YouTube",
-    href: "https://www.youtube.com/watch?v=wYb1UalOsWg",
-    image: img("yt-wYb1UalOsWg.jpg"),
-    category: "Watch & Listen",
-    kind: "Video",
+    note: "2016 - In Italian",
+    youtube: "wYb1UalOsWg",
+    poster: img("yt-wYb1UalOsWg.jpg"),
   },
 ]
