@@ -11,6 +11,7 @@ import { Marquee } from "@/components/site/marquee"
 import { Reveal } from "@/components/site/reveal"
 import { ThoughtLeadership } from "@/components/site/thought-leadership"
 import { ValuesExplorer } from "@/components/site/values-explorer"
+import { asset } from "@/lib/asset"
 
 export default function Home() {
   return (
@@ -113,7 +114,7 @@ export default function Home() {
       {/* Six values */}
       <section className="section relative isolate overflow-hidden">
         <Image
-          src="/images/bay-bridge.jpg"
+          src={asset("/images/bay-bridge.jpg")}
           alt=""
           fill
           sizes="100vw"

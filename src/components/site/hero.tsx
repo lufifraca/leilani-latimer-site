@@ -2,6 +2,7 @@ import Image from "next/image"
 import { roles } from "@/lib/content"
 import { Cta } from "./cta"
 import { Reveal } from "./reveal"
+import { asset } from "@/lib/asset"
 
 function BadgeRing() {
   const text = "NACD Directorship Certified ✦ Directors to Watch 2026 ✦ "
@@ -19,7 +20,7 @@ function BadgeRing() {
         </text>
       </svg>
       <Image
-        src="/images/nacd.png"
+        src={asset("/images/nacd.png")}
         alt="NACD Directorship Certified badge"
         width={500}
         height={500}
@@ -77,7 +78,7 @@ export function Hero() {
         <Reveal delay={0.2} y={40} className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="blob animate-blob relative aspect-[4/5] overflow-hidden bg-cream shadow-2xl shadow-ink/25">
             <Image
-              src="/images/portrait.jpg"
+              src={asset("/images/portrait.jpg")}
               alt="Leilani Latimer"
               fill
               priority
@@ -95,7 +96,7 @@ export function Hero() {
             className="absolute -top-6 -right-2 w-24 rotate-6 transition-transform hover:scale-105 hover:rotate-0 sm:w-28"
           >
             <Image
-              src="/images/dtw-2026.webp"
+              src={asset("/images/dtw-2026.webp")}
               alt="Directors & Boards: Director to Watch 2026"
               width={750}
               height={767}

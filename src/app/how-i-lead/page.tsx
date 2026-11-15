@@ -5,6 +5,7 @@ import { CtaBand } from "@/components/site/cta-band"
 import { Marquee } from "@/components/site/marquee"
 import { PageHero } from "@/components/site/page-hero"
 import { Reveal } from "@/components/site/reveal"
+import { asset } from "@/lib/asset"
 
 export const metadata: Metadata = {
   title: "How I Lead",
@@ -38,7 +39,7 @@ export default function HowILead() {
       </div>
 
       <section className="section relative isolate overflow-hidden">
-        <Image src="/images/bay-bridge.jpg" alt="" fill sizes="100vw" className="-z-10 object-cover opacity-30" />
+        <Image src={asset("/images/bay-bridge.jpg")} alt="" fill sizes="100vw" className="-z-10 object-cover opacity-30" />
         <ol className="container-x flex flex-col py-12 lg:py-20">
           {values.map((value, i) => (
             <li key={value.name} className="border-b border-foreground/20 last:border-b-0">

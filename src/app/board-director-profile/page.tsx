@@ -9,6 +9,7 @@ import { Cta } from "@/components/site/cta"
 import { CtaBand } from "@/components/site/cta-band"
 import { PageHero } from "@/components/site/page-hero"
 import { Reveal } from "@/components/site/reveal"
+import { asset } from "@/lib/asset"
 
 export const metadata: Metadata = {
   title: "Board Director Profile",
@@ -66,7 +67,7 @@ export default function BoardDirectorProfile() {
         <div className="container-x grid items-center gap-12 py-20 lg:grid-cols-[auto_1fr] lg:gap-20 lg:py-28">
           <Reveal className="flex items-center gap-6 lg:flex-col">
             <Image
-              src="/images/nacd.png"
+              src={asset("/images/nacd.png")}
               alt="NACD Directorship Certified"
               width={500}
               height={500}
@@ -79,7 +80,7 @@ export default function BoardDirectorProfile() {
               className="transition-transform hover:scale-105"
             >
               <Image
-                src="/images/dtw-2026.webp"
+                src={asset("/images/dtw-2026.webp")}
                 alt="Directors & Boards: Director to Watch 2026"
                 width={750}
                 height={767}

@@ -1,10 +1,12 @@
+import { asset } from "./asset"
+
 export const site = {
   name: "Leilani Latimer",
   title: "Leilani Latimer | C-Suite Executive, Board Director & Strategic Advisor",
   description:
     "Scaling B2B, SaaS, and enterprise technology companies through revenue growth, business transformation, and strategic execution.",
   linkedin: "https://www.linkedin.com/in/leilanilatimer/",
-  bioPdf: "/files/Leilani_Latimer_Board_Bio.pdf",
+  bioPdf: asset("/files/Leilani_Latimer_Board_Bio.pdf"),
   location: "San Francisco, California",
 }
 
@@ -223,7 +225,7 @@ export type Piece = {
   kind?: "Article" | "Podcast" | "Video"
 }
 
-const img = (name: string) => `/images/${name}`
+const img = (name: string) => asset(`/images/${name}`)
 
 export const featured: Piece = {
   title: "2026 Directors to Watch",
