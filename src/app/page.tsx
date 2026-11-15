@@ -1,13 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
-import { about, featured, marquee, services, stats, testimonial, videos } from "@/lib/content"
+import { about, featured, services, stats, testimonial, videos } from "@/lib/content"
 import { BoardCards } from "@/components/site/board-cards"
 import { CountUp } from "@/components/site/count-up"
 import { Cta } from "@/components/site/cta"
 import { CtaBand } from "@/components/site/cta-band"
 import { Hero } from "@/components/site/hero"
-import { Marquee } from "@/components/site/marquee"
 import { Reveal } from "@/components/site/reveal"
 import { ThoughtLeadership } from "@/components/site/thought-leadership"
 import { VideoPlayer } from "@/components/site/video-player"
@@ -18,10 +17,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-
-      <div className="dark section border-y">
-        <Marquee items={marquee} className="display py-5 text-2xl italic sm:text-3xl" />
-      </div>
 
       {/* Proof points */}
       <section className="section">

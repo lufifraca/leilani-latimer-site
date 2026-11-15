@@ -21,19 +21,6 @@ export const roles = [
   "Strategic Advisor to CEOs, Investors & Founders",
 ]
 
-export const marquee = [
-  "AI Governance",
-  "Cybersecurity Oversight",
-  "Revenue Growth",
-  "ESG & Sustainability",
-  "M&A",
-  "Go-to-Market Strategy",
-  "Business Transformation",
-  "International Expansion",
-  "Succession Planning",
-  "Enterprise Risk",
-]
-
 export const stats = [
   { value: 25, prefix: "", suffix: "+", label: "years leading B2B, SaaS, data, AI/ML, and enterprise technology companies" },
   { value: 300, prefix: "$", suffix: "M", label: "global product investment and capital allocation framework led" },

@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import { values } from "@/lib/content"
 import { CtaBand } from "@/components/site/cta-band"
-import { Marquee } from "@/components/site/marquee"
 import { PageHero } from "@/components/site/page-hero"
 import { Reveal } from "@/components/site/reveal"
 import { asset } from "@/lib/asset"
@@ -33,10 +32,6 @@ export default function HowILead() {
           from strategy to execution.
         </p>
       </PageHero>
-
-      <div className="dark section border-y">
-        <Marquee items={values.map((v) => v.name)} className="display py-5 text-2xl italic sm:text-3xl" />
-      </div>
 
       <section className="section relative isolate overflow-hidden">
         <Image src={asset("/images/bay-bridge.jpg")} alt="" fill sizes="100vw" className="-z-10 object-cover opacity-30" />

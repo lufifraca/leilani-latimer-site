@@ -156,11 +156,6 @@
   }
 }
 
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
 @keyframes spin-slow {
   to {
     transform: rotate(360deg);
@@ -175,9 +170,6 @@
     border-radius: 42% 58% 60% 40% / 56% 40% 60% 44%;
   }
 }
-.animate-marquee {
-  animation: marquee 38s linear infinite;
-}
 .animate-spin-slow {
   animation: spin-slow 28s linear infinite;
 }
@@ -185,7 +177,6 @@
   animation: blob-morph 14s ease-in-out infinite;
 }
 @media (prefers-reduced-motion: reduce) {
-  .animate-marquee,
   .animate-spin-slow,
   .animate-blob {
     animation: none;
